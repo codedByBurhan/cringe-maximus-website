@@ -2,6 +2,8 @@
 
 ### The World's Worst Landing Page — A Masterpiece of Suffering
 
+🌐 **Live Site:** [https://codedbyburhan.github.io/cringe-maximus-website/cringe-maximus.html](https://codedbyburhan.github.io/cringe-maximus-website/cringe-maximus.html)
+
 > Inspired by the golden age of GeoCities circa 2003. This page was built with zero regard for the user, maximum disregard for design principles, and an unwavering commitment to being absolutely terrible.
 
 ---
