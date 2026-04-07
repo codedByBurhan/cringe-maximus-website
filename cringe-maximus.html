@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WELC0ME TO DA BEST SITE EVAR!!!!</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+    body {
+      background-color: #00FF00;
+      background-image: repeating-linear-gradient(45deg, #FF00FF 0px, #FF00FF 2px, #00FF00 2px, #00FF00 20px);
+      font-family: 'Comic Neue', 'Comic Sans MS', cursive;
+      overflow-x: hidden;
+      margin: 0;
+      cursor: crosshair;
+    }
+    .marquee-bar { background: #FF0000; color: #FFFF00; font-size: 22px; font-weight: bold; padding: 6px 0; white-space: nowrap; overflow: hidden; }
+    .marquee-inner { display: inline-block; animation: marquee 6s linear infinite; }
+    @keyframes marquee { from { transform: translateX(100vw); } to { transform: translateX(-200%); } }
+    .marquee-reverse .marquee-inner { animation-direction: reverse; background: #0000FF; color: #FF6600; }
+    .hero { background: #FF6600; border: 8px dashed #0000FF; padding: 20px; text-align: center; margin: 10px; transform: rotate(1deg); }
+    .hero h1 { font-size: 64px; color: #FFFF00; text-shadow: 4px 4px #FF0000, -4px -4px #0000FF; font-family: Impact, cursive; line-height: 1; animation: blink 0.5s step-start infinite; margin: 0; }
+    .hero h1 span { font-size: 22px; color: #00FF00; display: block; font-family: 'Papyrus', fantasy; }
+    @keyframes blink { 50% { opacity: 0; } }
+    .cta-btn { background: #FF00FF; color: #FFFF00; border: 5px solid #00FFFF; font-size: 24px; padding: 12px 30px; cursor: pointer; font-family: 'Comic Sans MS', cursive; animation: shake 0.3s infinite; display: inline-block; margin-top: 10px; }
+    @keyframes shake { 0%,100% { transform: rotate(-2deg); } 50% { transform: rotate(2deg); } }
+    .broken-nav { background: #C0C0C0; padding: 4px; display: flex; gap: 0; border-bottom: 4px ridge #808080; flex-wrap: wrap; }
+    .broken-nav a { background: #000080; color: #FFFFFF; padding: 4px 10px; font-size: 14px; text-decoration: none; border: 2px outset #C0C0C0; margin: 2px; font-family: 'Comic Sans MS', cursive; }
+    .broken-nav a:nth-child(3) { margin-left: 80px; background: #FF0000; }
+    .broken-nav a:nth-child(5) { position: relative; left: -40px; top: 15px; }
+    .win-banner { color: #000000; font-size: 20px; font-weight: bold; text-align: center; padding: 8px; margin: 10px; animation: rainbow 0.3s infinite; }
+    @keyframes rainbow { 0%{background:#FF0000;} 16%{background:#FF6600;} 33%{background:#FFFF00;} 50%{background:#00FF00;} 66%{background:#0000FF;} 83%{background:#FF00FF;} 100%{background:#FF0000;} }
+    .visitor-counter { background: #000080; color: #FFFF00; font-size: 28px; font-family: 'Courier New', monospace; text-align: center; padding: 10px; border: 6px inset #C0C0C0; margin: 10px; letter-spacing: 4px; }
+    .columns { display: flex; gap: 0; margin: 10px; }
+    .col-left { width: 70%; background: #FFFFFF; border: 5px solid #FF00FF; padding: 10px; }
+    .col-right { width: 40%; background: #00FFFF; border: 5px solid #FF0000; padding: 10px; margin-left: -20px; margin-top: 30px; }
+    .feature-box { background: #FF0000; color: #FFFFFF; border: 4px double #FFFF00; padding: 10px; margin: 8px 0; transform: skew(-3deg); }
+    .feature-box h3 { color: #FFFF00; font-size: 20px; margin: 0; font-family: 'Papyrus', fantasy; }
+    .table-in-table { border: 2px solid #FF0000; width: 100%; font-size: 12px; }
+    .table-in-table td { border: 1px solid #0000FF; padding: 2px; }
+    .inner-table { border: 2px solid #00FF00; width: 100%; }
+    .inner-table td { border: 1px solid #FF00FF; padding: 2px; background: #FFFFCC; font-size: 11px; }
+    .overflow-btn { background: #FF0000; color: #FFFFFF; font-size: 14px; padding: 8px 16px; border: none; cursor: pointer; position: relative; left: 60%; font-family: 'Comic Sans MS', cursive; }
+    .tiny-text { font-size: 6px; color: #808080; }
+    .giant-text { font-size: 72px; color: #FF00FF; font-family: Impact; margin: 0; }
+    .guestbook { background: #FFF8DC; border: 3px solid #8B4513; padding: 10px; margin: 10px; }
+    .guestbook h2 { color: #8B0000; font-family: 'Papyrus', fantasy; font-size: 28px; text-align: center; }
+    .guest-entry { border-bottom: 2px dotted #8B4513; padding: 6px 0; font-size: 13px; }
+    .guest-name { color: #0000FF; font-weight: bold; font-size: 16px; }
+    .missing-img { width: 80px; height: 60px; background: #CCCCCC; border: 1px solid #999; display: inline-flex; align-items: center; justify-content: center; font-size: 28px; margin: 4px; }
+    .footer { background: #000000; color: #00FF00; text-align: center; padding: 10px; font-family: 'Courier New', monospace; font-size: 11px; border-top: 4px solid #FF0000; }
+    .midi-note { background: #000080; color: #FFFF00; font-size: 11px; text-align: center; padding: 3px; font-family: 'Courier New', monospace; }
+    .popup-overlay { background: rgba(0,0,0,0.7); display: flex; align-items: center; justify-content: center; padding: 40px; min-height: 300px; }
+    .popup-box { background: #FFFF00; border: 6px solid #FF0000; padding: 20px; max-width: 340px; text-align: center; transform: rotate(-3deg); font-family: 'Comic Sans MS', cursive; }
+    .popup-box h2 { color: #FF0000; font-size: 26px; margin: 0 0 10px; text-shadow: 3px 3px #0000FF; }
+    .popup-box button { background: #FF00FF; color: #00FF00; border: 4px solid #0000FF; font-size: 18px; padding: 8px 20px; cursor: pointer; font-family: 'Comic Sans MS', cursive; display: block; margin: 8px auto; width: 100%; }
+    #pop2-overlay { display: none; background: rgba(0,0,0,0.6); padding: 20px; text-align: center; margin: 10px; }
+  </style>
+</head>
+<body>
+
+  <div class="midi-note">*** AUTO-PLAYING MIDI: Fur Elise (Best of Best Mix 2003) *** [LOADING... 99%] ***</div>
+
+  <div class="marquee-bar"><div class="marquee-inner">*** WELCOME TO THE BEST WEBSITE ON THE ENTIRE INTERNET *** YOU ARE VISITOR #4,892,047 *** FREE RINGTONES CLICK HERE *** DOWNLOAD LIMEWIRE PRO ***</div></div>
+  <div class="marquee-bar marquee-reverse"><div class="marquee-inner">~~~ THIS SITE IS BEST VIEWED IN INTERNET EXPLORER 6.0 AT 800x600 RESOLUTION ~~~ HOT SINGLES IN YOUR AREA ~~~ YOUR COMPUTER HAS 37 VIRUSES CLICK TO FIX ~~~</div></div>
+
+  <div class="broken-nav">
+    <a href="#">HOME</a>
+    <a href="#">ABOUT</a>
+    <a href="#">CONTACT US</a>
+    <a href="#">GUESTBOOK</a>
+    <a href="#">CLICK HERE</a>
+    <a href="#">UNDER CONSTRUCTION</a>
+  </div>
+
+  <div id="popup1-area" class="popup-overlay">
+    <div class="popup-box">
+      <h2>*** CONGRATULATIONS!! ***</h2>
+      <p style="color:#0000FF;font-size:18px;">YOU ARE OUR <span style="font-size:36px;color:#FF0000;">1,000,000TH</span> VISITOR!!!<br>YOU HAVE WON A FREE iPOD NANO!!!</p>
+      <p style="font-size:12px;color:#808080;">(must provide credit card to claim)</p>
+      <button onclick="closePop1()">CLAIM PRIZE NOW!!! &gt;&gt;&gt;</button>
+      <button onclick="closePop1()" style="background:#FF0000;">NO THANKS I HATE FREE STUFF</button>
+    </div>
+  </div>
+
+  <div id="main-content" style="display:none;">
+
+    <div class="hero">
+      <h1>WELC0ME!!!<span>~~~ To Da Best Site Evar ~~~</span></h1>
+      <div style="display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;">
+        <div class="missing-img">🖼️</div>
+        <p style="color:#FFFFFF;font-size:14px;background:#000080;padding:6px;">
+          Online since <span style="font-size:28px;color:#FFFF00;">NOVEMBER 14TH, 2003</span><br>
+          <span class="tiny-text">* this claim has not been verified</span>
+        </p>
+        <div class="missing-img">🖼️</div>
+      </div>
+      <button class="cta-btn" onmouseover="showPop2()" onclick="showPop2()">CLICK HERE TO ENTER SITE !!!!!</button>
+    </div>
+
+    <div class="win-banner">*** YOU MAY HAVE ALREADY WON $1,000,000 — CLICK HERE TO FIND OUT!!! ***</div>
+
+    <div class="visitor-counter">VISITORS: 004,892,047</div>
+
+    <div class="columns">
+      <div class="col-left">
+        <h2 style="color:#FF00FF;font-family:'Papyrus',fantasy;font-size:32px;text-shadow:2px 2px #FFFF00;">WHY CHOOSE US??</h2>
+        <div class="feature-box"><h3>★ WE ARE THE BEST ★</h3><p style="color:#FFFFFF;font-size:13px;">We are literally the best at everything. No other website compares to our website which is this website you are on right now.</p></div>
+        <div class="feature-box" style="transform:skew(3deg);background:#006400;"><h3>★ FAST LOADING ★</h3><p style="color:#FFFFFF;font-size:13px;">Our site loads in only 47 seconds on 56k modem! BLAZING FAST!!!!</p></div>
+        <div class="feature-box" style="transform:rotate(-1deg);background:#800080;"><h3>★ SECURE WEBSITE ★</h3><p style="color:#FFFFFF;font-size:13px;">Protected by Norton AntiVirus 2001. Hacker-proof 100% GUARANTEED or your money back*<br><span class="tiny-text">*money back not available</span></p></div>
+        <p style="font-size:8px;color:#FF0000;">IMPORTANT LEGAL NOTICE: By viewing this website you agree to our terms and conditions which are 847 pages long</p>
+        <p class="giant-text">WOW!</p>
+        <p class="tiny-text">The above exclamation was provided for your enjoyment. All rights reserved. This exclamation may not be reproduced.</p>
+        <p style="font-size:20px;color:#FF0000;font-family:'Papyrus',fantasy;">Our AWARD-WINNING table technology:</p>
+        <table class="table-in-table">
+          <tr><td><table class="inner-table"><tr><td>Cell inside a cell</td><td><table style="border:2px solid #FF00FF;width:100%;"><tr><td style="background:#FF9999;font-size:10px;">Nested again</td><td style="background:#99FF99;font-size:10px;">so deep</td></tr></table></td></tr></table></td><td style="background:#FFCCFF;font-size:12px;vertical-align:top;">More stuff here</td></tr>
+        </table>
+        <br>
+        <button class="overflow-btn">CLICK ME (if u can find me)</button>
+      </div>
+      <div class="col-right">
+        <h2 style="color:#FF0000;font-family:'Comic Sans MS',cursive;font-size:24px;background:#FFFFFF;transform:rotate(3deg);">HOT DEALS!!!</h2>
+        <div style="background:#FF00FF;color:#FFFF00;padding:8px;font-size:14px;border:3px solid #00FF00;margin:6px 0;">
+          ~~SALE~~<br>Buy 1 get 0 free!!<br><span style="font-size:28px;">$$$$$</span><br><span class="tiny-text">price not guaranteed</span>
+        </div>
+        <div class="missing-img" style="width:120px;height:90px;display:inline-flex;">🖼️</div>
+        <p style="font-size:7px;color:#808080;">Image of product (product may not exist)</p>
+        <div style="background:#FFFF00;color:#FF0000;padding:6px;font-size:13px;border:4px outset #C0C0C0;">
+          *** LIMITED TIME ONLY ***<br>
+          OFFER EXPIRES: YESTERDAY<br>
+          <span style="animation:blink 1s infinite;display:inline-block;font-size:16px;">ACT NOW!!!</span>
+        </div>
+      </div>
+    </div>
+
+    <div id="pop2-overlay">
+      <div class="popup-box" style="transform:rotate(2deg);display:inline-block;">
+        <h2>WAIT!! DON'T LEAVE!!!</h2>
+        <p style="color:#000000;font-size:16px;">Are you SURE you want to click that button?<br>You might miss out on<br><span style="font-size:28px;color:#FF0000;font-weight:bold;">AMAZING DEALS!!!</span></p>
+        <button onclick="closePop2()" style="background:#00AA00;color:#FFFFFF;border:3px solid #006600;">YES TAKE ME INSIDE!!!</button>
+        <button onclick="closePop2()" style="background:#FF0000;">FINE I HATE DEALS</button>
+      </div>
+    </div>
+
+    <div style="background:#FFFFFF;padding:10px;margin:10px;border:3px dotted #FF0000;font-size:18px;">
+      <span style="color:#FF0000;font-size:32px;">H</span><span style="color:#FF6600;font-size:12px;">e</span><span style="color:#000000;background:#FFFF00;font-size:24px;">L</span><span style="color:#00FF00;font-size:18px;">L</span><span style="color:#0000FF;font-size:36px;">o</span><span style="color:#FF00FF;font-size:10px;font-family:'Papyrus',fantasy;"> W</span><span style="color:#FF0000;font-size:28px;font-style:italic;">O</span><span style="color:#00FFFF;font-size:14px;font-family:Impact;">r</span><span style="color:#FF6600;font-size:22px;">L</span><span style="color:#800080;font-size:8px;">d</span>
+      <p style="font-size:6px;color:#FF0000;">plz dont steal my design i worked very hard on it</p>
+    </div>
+
+    <div class="guestbook">
+      <h2>~~~ GuestBook 2003 ~~~</h2>
+      <div class="guest-entry"><span class="guest-name">xX_DarkWolf99_Xx</span>: <em style="color:#800080;">"cool site lol u r the best webmaster ever i bookmarked u"</em></div>
+      <div class="guest-entry"><span class="guest-name">CoolGirl2003</span>: <em style="color:#008000;">"OMG this is so kewl!! i love the music!!1! add me on MSN: coolgirl2003@hotmail.com xoxo"</em></div>
+      <div class="guest-entry"><span class="guest-name">h4x0r_supreme</span>: <em style="color:#FF0000;">"first!!!!!!!!! this site roxors my boxors keep it real"</em></div>
+      <div class="guest-entry"><span class="guest-name">WebmasterSteve</span>: <em style="color:#000080;">"I made this site myself with Notepad. Please sign my guestbook. Also visit my other site."</em></div>
+      <div style="margin-top:10px;">
+        <input type="text" placeholder="Your Name (e.g. CoolDude97)" style="border:2px inset #808080;font-family:'Comic Sans MS',cursive;font-size:14px;width:200px;">
+        <button style="background:#000080;color:#FFFF00;font-family:'Comic Sans MS',cursive;border:2px outset #C0C0C0;font-size:14px;cursor:pointer;">Sign Guestbook!!</button>
+      </div>
+    </div>
+
+    <div id="infinite-zone"></div>
+
+    <div class="footer">
+      <p>** THIS SITE IS UNDER CONSTRUCTION **</p>
+      <p>Best viewed in Internet Explorer 6.0 | 800x600 | 256 colors</p>
+      <p>© 2003 WebmasterSteve. All rights reserved. No stealing!!!!</p>
+      <p>This site has been awarded: <span style="color:#FFFF00;">★★★★★ BEST WEBSITE AWARD (self-awarded) ★★★★★</span></p>
+      <p class="tiny-text" style="color:#444;font-size:10px;">Site last updated: sometime in 2003 | Page generated in 47.3 seconds | Powered by FrontPage Express</p>
+    </div>
+
+  </div>
+
+  <script>
+    function closePop1() {
+      document.getElementById('popup1-area').style.display = 'none';
+      document.getElementById('main-content').style.display = 'block';
+      setTimeout(startInfiniteScroll, 2000);
+    }
+    function showPop2() {
+      document.getElementById('pop2-overlay').style.display = 'block';
+    }
+    function closePop2() {
+      document.getElementById('pop2-overlay').style.display = 'none';
+    }
+    var infiniteCount = 0;
+    var infiniteMsgs = [
+      "CONGRATULATIONS you have scrolled far!! Click here to claim your prize",
+      "Did you know? Our website was voted #1 by us in 2003",
+      "*** LOADING MORE AMAZING CONTENT *** please wait...",
+      "You are still scrolling??? WOW you must really love us!!",
+      "FREE SCREENSAVERS - CLICK HERE - TOTALLY SAFE NO VIRUSES",
+      "This website is powered by pure HTML and dreams",
+      "BONUS SECTION: More stuff you did not ask for",
+      "Our CEO says: 'This website is the best website' - CEO of Website",
+      "Still here?? You win nothing. Scroll more.",
+      "CLICK HERE to subscribe to our newsletter (you cannot unsubscribe)"
+    ];
+    var colors = ['#FF9999','#99FF99','#9999FF','#FFFF99','#FF99FF','#99FFFF'];
+    function startInfiniteScroll() {
+      setInterval(function() {
+        var zone = document.getElementById('infinite-zone');
+        var c = colors[infiniteCount % colors.length];
+        var div = document.createElement('div');
+        div.style.cssText = 'background:'+c+';border:4px dashed #FF0000;padding:12px;margin:8px 10px;font-family:Comic Sans MS,cursive;font-size:18px;font-weight:bold;color:#000000;text-align:center;transform:rotate('+(Math.random()*4-2)+'deg);';
+        div.innerHTML = '*** ' + infiniteMsgs[infiniteCount % infiniteMsgs.length] + ' ***<br><span style="font-size:11px;color:#808080;">(section ' + (infiniteCount+1) + ' of infinite)</span>';
+        zone.appendChild(div);
+        infiniteCount++;
+      }, 1800);
+    }
+    window.onbeforeunload = function() {
+      return "ARE YOU SURE YOU WANT TO LEAVE?? You will miss out on AMAZING DEALS!!!";
+    };
+  </script>
+
+</body>
+</html>
